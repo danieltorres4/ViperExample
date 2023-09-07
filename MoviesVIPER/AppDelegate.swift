@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MoviesVIPER
 //
-//  Created by Iván Sánchez Torres on 05/09/23.
+//  Created by Daniel Sanchez Torres on 05/09/23.
 //
 
 import UIKit
