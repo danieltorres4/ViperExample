@@ -52,6 +52,7 @@ class ListOfMoviesView: UIViewController {
         ])
         
         moviesTableView.dataSource = self /// Data will be provided by ListOfMoviesView
+        moviesTableView.delegate = self
     }
     
 }
@@ -68,6 +69,12 @@ extension ListOfMoviesView: ListOfMoviesUI {
         }
     }
 
+}
+
+extension ListOfMoviesView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.onTapCell(atIndex: indexPath.row)
+    }
 }
 
 extension ListOfMoviesView: UITableViewDataSource {
